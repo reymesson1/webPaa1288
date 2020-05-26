@@ -1,0 +1,30 @@
+<br/>
+<br/>
+<br/>
+<div style="margin-left:32%;margin-top:5%;" class="col-md-4">
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+        <div class="row">
+          <div class="col-md-12">
+            <input class="form-control" type="text" placeholder="Username" name="username" ngModel #first="ngModel" />
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-md-12">
+            <input class="form-control" type="password" placeholder="Password" name="password" ngModel #first="ngModel" />
+          </div>
+        </div>
+        <br/>
+        <div class="row">
+          <div class="col-md-12">
+            <button type="submit" class="col-md-12 btn btn-primary">Login</button>
+          </div>        
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br/>
+<br/>

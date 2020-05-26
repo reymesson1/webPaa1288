@@ -1,4 +1,7 @@
 import { Component } from '@angular/core';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
+import {Router} from '@angular/router';
+import {RestapiService} from './restapi.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +9,8 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'my-app';
+
+  constructor(public restapiservice : RestapiService, private router : Router) { }
+
+
 }

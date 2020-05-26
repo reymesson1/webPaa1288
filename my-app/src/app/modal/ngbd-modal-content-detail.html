@@ -1,0 +1,39 @@
+<div class="modal-header">
+    <h4 class="modal-title">Add Detail</h4>
+<button type="button" class="close" aria-label="Close" (click)="activeModal.dismiss('Cross click')">
+    <span aria-hidden="true">&times;</span>
+</button>
+</div>
+<div class="modal-body">
+
+    <div class="row">
+
+        <div class="col-md-12">
+            
+            <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate>
+                <div class="row">
+                    <div class="col-md-12">
+                    <input class="form-control" type="text" placeholder="Nombre del Modulo" name="modulo" ngModel #first="ngModel" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-12">
+                    <input class="form-control" type="text" placeholder="Tiempo" name="tiempo" ngModel #first="ngModel" />
+                    </div>
+                </div>
+                <br/>
+                <div class="row">
+                    <div class="col-md-offset-10">
+                    <button type="submit" class="col-md-12 btn btn-primary">Login</button>
+                    </div>        
+                </div>
+            </form>            
+        </div>
+
+    </div>
+
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-outline-dark" (click)="activeModal.close('Close click')">Close</button>
+</div>

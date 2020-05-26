@@ -1,0 +1,86 @@
+<div class="container-fluid">
+
+      <app-navbar></app-navbar>
+
+      <app-jumbotron></app-jumbotron>
+
+      <app-navbar-bottom></app-navbar-bottom>
+
+      <app-breadcrumb></app-breadcrumb>
+
+
+<div class="row">
+        <div class="col-md-9">
+
+          <app-jumbotron-bottom></app-jumbotron-bottom>
+
+          <div class="row">
+            
+            <div class="col-md-offset-10">
+              <button class="btn btn-danger" (click)="open()">Add Master</button>
+            </div>
+
+          </div>
+
+          <br/>
+
+
+          <div *ngFor="let user of users; let i = index">
+            <div class="panel panel-info">
+              <div class="panel-heading">
+                <h3 class="panel-title">{{"Modulo " +  user.id + ":" }}</h3>
+              </div>
+              <div class="panel-body">
+                    <div class="col-md-offset-10">
+                      <button class="btn btn-danger" (click)="openDetail(user.id)">Add Detail</button>
+                    </div>
+                    <br/>
+                <div *ngFor="let detail of user.details" class="list-group">
+                  <div class="row">
+                    <div class="col-md-10">
+                      <button type="button" class="list-group-item">{{detail.name}}</button>
+                    </div>
+                    <div class="col-md-1">
+                      <button type="button" style="text-align:center;" (click)="openEdit(user.id, detail.id)" class="list-group-item"><i class="fa fa-edit fa-1x" aria-hidden="true"></i></button>
+                    </div>
+                    <div class="col-md-1">
+                      <button type="button" style="text-align:center;" (click)="removeDetail(user.id,detail.id)" class="list-group-item"><i class="fa fa-trash fa-1x" aria-hidden="true"></i></button>
+                    </div>
+                    <!-- <div class="col-md-offset-10">
+                      <i class="fa fa-trash fa-1x" aria-hidden="true"></i>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+
+        <div class="col-md-3">
+
+            <div class="panel panel-default">
+                <div class="panel-heading">Navegador</div>
+                <div class="panel-body">                  
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="#">Area Personal</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Inicio del sitio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="#">Paginas del sitio</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link disabled" href="#">Mis Cursos</a>
+                        </li>
+                    </ul> 
+                </div>
+            </div>
+  
+        </div>
+          
+  </div>
+
+</div>
